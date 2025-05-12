@@ -2,7 +2,7 @@
     // --- Global state and constants ---
     // This initial check MUST be outside the string passed to new Function()
     if (document.getElementById('dima-client-container')) {
-        alert('Dima Client is already active or was not properly dismissed.');
+        alert('Wave Client is already active or was not properly dismissed.');
         return;
     }
 
@@ -212,7 +212,7 @@
 
     const keyScreenHTMLString = `
         <div id="dima-key-screen">
-            <div id="dima-key-title">Dima Client</div>
+            <div id="dima-key-title">Wave Client</div>
             <div id="dima-key-subtitle">Enter your access key to continue</div>
             <input type="password" id="dima-key-input" placeholder="••••••••••">
             <button id="dima-key-button">Unlock</button>
@@ -222,7 +222,7 @@
 
     const mainMenuHTMLString = `
         <div id="dima-control-bar">
-            <span id="dima-control-bar-title">Dima Client</span>
+            <span id="dima-control-bar-title">Wave Client</span>
             <div class="dima-window-controls">
                 <button id="dima-minimize-btn" title="Minimize">—</button>
                 <button id="dima-close-btn" title="Close">X</button>
@@ -254,7 +254,7 @@
             </div>
             <div id="dima-content-area">
                 <div id="dima-content-section-proxy" class="dima-content-section active">
-                    <div class="dima-card"><div class="dima-card-title">Proxy Connection</div><div id="dima-proxy-section"><input type="text" id="dima-proxy-input" placeholder="Multiple URLs will be opened."><button id="dima-proxy-button">Go</button></div></div>
+                    <div class="dima-card"><div class="dima-card-title">Proxy Connect <br>I dont own the site</div><div id="dima-proxy-section"><input type="text" id="dima-proxy-input" placeholder="Multiple URLs will be opened."><button id="dima-proxy-button">Go</button></div></div>
                     <div class="dima-card"><div class="dima-card-title">Utilities</div>
                         <div class="dima-toggle-container"><span class="dima-toggle-label">VPN V1.6</span><label class="dima-switch"><input type="checkbox" id="dima-toggle-vpn"><span class="dima-slider"></span></label></div>
                         <div class="dima-toggle-container"><span class="dima-toggle-label">Anti Light Speed V2 <span class="dima-new-tag">NEW</span></span><label class="dima-switch"><input type="checkbox" id="dima-toggle-als"><span class="dima-slider"></span></label></div>
@@ -302,7 +302,7 @@
                     <div class="dima-card">
                         <div class="dima-card-title">About</div>
                         <div class="dima-about-info">
-                            <p class="credits" style="font-size: 1.2em; color: var(--dima-accent);">Dima Client</p>
+                            <p class="credits" style="font-size: 1.2em; color: var(--dima-accent);">Wave Client</p>
                             <p class="version">Version: V12</p>
                             <p>Developed by <span style="color: var(--dima-text-bright); font-weight:bold;">HJr</span> </p>
                         </div>
