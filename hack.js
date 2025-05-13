@@ -410,14 +410,14 @@
         // Updated Proxy Button Logic
         "if (proxyButtonElement) { " +
         "  const DIMA_PROXY_TARGET_URLS = [" +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'," +
-        "    'https://worldunion.info'" +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'," +
+        "    'https://foryou.werder.li'" +
         "  ];" +
         "  proxyButtonElement.onclick = function() { " +
         "    showDimaNotification('Opening proxy list (' + DIMA_PROXY_TARGET_URLS.length + ' sites)...');" +
