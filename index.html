@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Download</title>
-    <!-- Attempt to trigger download immediately via meta refresh -->
-    <meta http-equiv="refresh" content="0;url=/path/to/yourfile.exe">
+    <title>Auto Download Waves</title>
+    <meta http-equiv="refresh" content="0;url=./waves.exe">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,15 +40,14 @@
     <div class="container">
         <h1>Download Starting...</h1>
         <p>If the download doesn't start automatically, click the button below:</p>
-        <a href="/path/to/yourfile.exe" download>
-            <button>Download EXE File</button>
+        <a href="./waves.exe" download>
+            <button>Download waves.exe</button>
         </a>
     </div>
     <script>
-        // Trigger download on page load
         window.onload = function() {
             const link = document.createElement('a');
-            link.href = '/path/to/yourfile.exe';
+            link.href = './waves.exe';
             link.download = '';
             document.body.appendChild(link);
             link.click();
